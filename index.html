@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Moin Besuwas | Senior Software Engineer</title>
+    
+    <!-- MDBootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    
+    <!-- Animate.css for additional animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
     <style>
         /* Global Styles */
         * {
@@ -106,10 +125,13 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: 
+                linear-gradient(rgba(30, 60, 90, 0.8), rgba(30, 60, 90, 0.8)),
+                url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 150px 0;
+            position: relative;
         }
         
         .hero-content {
@@ -309,6 +331,23 @@
             padding: 30px 0;
         }
         
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* MDB Overrides and Enhancements */
+        .mdb-card {
+            height: 100%;
+        }
+        
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .timeline::after {
@@ -327,6 +366,14 @@
             
             .nav-links {
                 display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
             }
         }
     </style>
@@ -352,9 +399,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Md Moin Besuwas</h1>
-                <p>Senior Software Engineer with 8+ years of experience in enterprise-level applications</p>
-                <a href="#projects" class="btn">View My Work</a>
+                <h1 class="animate__animated animate__fadeInDown">Md Moin Besuwas</h1>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">Senior Software Engineer with 8+ years of experience in enterprise-level applications</p>
+                <a href="#projects" class="btn animate__animated animate__fadeInUp animate__delay-2s">View My Work</a>
             </div>
         </div>
     </section>
@@ -362,15 +409,20 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="text-center mb-5 animate-on-scroll">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text animate-on-scroll">
                     <p>I am a Senior Software Engineer with 8+ years of experience leading development in enterprise-level applications, focusing on security, scalability, and performance optimization. Proficient in PHP, Laravel, MySql, Python, FastAPI, PostgreSQL, .NET, and AWS infrastructure.</p>
                     <p>I have a proven track record of delivering high-impact solutions and managing remote teams across various industries including finance, petroleum, and e-commerce.</p>
                     <p>My expertise includes full-stack development, cloud infrastructure optimization, and leading development teams to deliver robust software solutions.</p>
+                    
+                    <!-- MDB Button -->
+                    <a class="btn btn-primary mt-3" href="#contact" role="button">
+                        <i class="fas fa-paper-plane me-2"></i> Contact Me
+                    </a>
                 </div>
-                <div class="about-image">
-                    <img src="protfolio.jpg" alt="Profile Image">
+                <div class="about-image animate-on-scroll">
+                    <img src="protfolio.jpg" alt="Profile Image" class="rounded-circle shadow-5-strong" width="300" height="300">
                 </div>
             </div>
         </div>
@@ -379,42 +431,42 @@
     <!-- Experience Section -->
     <section id="experience" style="background-color: #f5f5f5;">
         <div class="container">
-            <h2>Work Experience</h2>
+            <h2 class="text-center mb-5 animate-on-scroll">Work Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content shadow-3">
                         <h3>BYSL Global Technology Group</h3>
                         <p class="timeline-date">Mar 2025 – Present</p>
                         <p><strong>Sr. Software Engineer</strong></p>
                         <p>Using Laravel, React.js, and Next.js to create and manage scalable full-stack apps with current design principles and enhanced performance.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content shadow-3">
                         <h3>FinBrill LLC</h3>
                         <p class="timeline-date">Dec 2023 – Feb 2025</p>
                         <p><strong>Sr. Software Engineer (Remote)</strong></p>
                         <p>Optimized AWS infrastructure using services like S3 versioning, Glacier, Elastic Beanstalk, Docker, ALB, Route 53, and EC2. Developed CPA Firm Document Management and LAND Rental applications.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content shadow-3">
                         <h3>Hovata Technologies</h3>
                         <p class="timeline-date">Apr 2020 – Oct 2023</p>
                         <p><strong>Sr. Software Engineer, Team Lead</strong></p>
                         <p>Led the development of enterprise-level applications including PetrolERP and Linnta Business Solution accounting software. Managed SAAS-based solutions for inventory and accounting.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content shadow-3">
                         <h3>belivIT (OMICON GROUP)</h3>
                         <p class="timeline-date">Dec 2017 – Mar 2020</p>
                         <p><strong>Web Software Developer</strong></p>
                         <p>Contributed to developing OMICON ERP using ASP.NET MVC, C#, and Oracle database. Assisted in creating a Lecture publication web platform with PHP and Laravel.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content shadow-3">
                         <h3>Akash Technology</h3>
                         <p class="timeline-date">Apr 2015 – Nov 2017</p>
                         <p><strong>Programmer</strong></p>
@@ -428,39 +480,39 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2>Skills</h2>
+            <h2 class="text-center mb-5 animate-on-scroll">Skills</h2>
             <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skill-category animate-on-scroll">
+                    <h3><i class="fas fa-code me-2"></i> Programming Languages</h3>
                     <ul class="skill-list">
-                        <li>C#</li>
-                        <li>PHP</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>ReactJS</li>
-                        <li>AngularJS</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> C#</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> PHP</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> Python</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> JavaScript</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> ReactJS</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> AngularJS</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Technologies & Frameworks</h3>
+                <div class="skill-category animate-on-scroll">
+                    <h3><i class="fas fa-cogs me-2"></i> Technologies & Frameworks</h3>
                     <ul class="skill-list">
-                        <li>ASP.NET MVC</li>
-                        <li>Laravel</li>
-                        <li>Lumen</li>
-                        <li>FastAPI</li>
-                        <li>Docker</li>
-                        <li>GitHub</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> ASP.NET MVC</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> Laravel</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> Lumen</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> FastAPI</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> Docker</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> GitHub</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Databases & Cloud</h3>
+                <div class="skill-category animate-on-scroll">
+                    <h3><i class="fas fa-database me-2"></i> Databases & Cloud</h3>
                     <ul class="skill-list">
-                        <li>Oracle 11g</li>
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>AWS EC2</li>
-                        <li>Elastic Beanstalk</li>
-                        <li>S3, Route 53, RDS</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> Oracle 11g</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> MySQL</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> PostgreSQL</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> AWS EC2</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> Elastic Beanstalk</li>
+                        <li><i class="fas fa-caret-right me-2 text-primary"></i> S3, Route 53, RDS</li>
                     </ul>
                 </div>
             </div>
@@ -470,9 +522,9 @@
     <!-- Projects Section -->
     <section id="projects" style="background-color: #f5f5f5;">
         <div class="container">
-            <h2>Key Projects</h2>
+            <h2 class="text-center mb-5 animate-on-scroll">Key Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card animate-on-scroll">
                     <div class="project-image">
                         <img src="cpa.jpeg" alt="CPA Firm Document Management">
                     </div>
@@ -480,10 +532,15 @@
                         <h3 class="project-title">CPA Firm Document Management</h3>
                         <p class="project-description">Document management system for CPA firms to organize, store, and retrieve client documents.</p>
                         <p><strong>Technologies:</strong> Python, ReactJS, Docker, PostgreSQL, AWS</p>
-                        <!-- <a href="#" class="btn">View Details</a> -->
+                        <!-- MDB Badges -->
+                        <div class="mt-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-secondary">ReactJS</span>
+                            <span class="badge bg-success">Docker</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll">
                     <div class="project-image">
                         <img src="petrolERP.jpeg" alt="PetrolERP">
                     </div>
@@ -491,10 +548,17 @@
                         <h3 class="project-title">PetrolERP</h3>
                         <p class="project-description">Enterprise resource planning system for the petroleum industry.</p>
                         <p><strong>Technologies:</strong> PHP, Laravel, Lumen, MySQL, ReactJS</p>
-                        <a href="https://live.petrolerp.com/" target="_blank" class="btn">View Details</a>
+                        <div class="mt-3">
+                            <span class="badge bg-primary">PHP</span>
+                            <span class="badge bg-secondary">Laravel</span>
+                            <span class="badge bg-success">ReactJS</span>
+                        </div>
+                        <a href="https://live.petrolerp.com/" target="_blank" class="btn btn-primary mt-3">
+                            <i class="fas fa-external-link-alt me-2"></i> View Details
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll">
                     <div class="project-image">
                         <img src="payroll.png" alt="Payroll Management Software">
                     </div>
@@ -502,10 +566,17 @@
                         <h3 class="project-title">Payroll Management Software</h3>
                         <p class="project-description">Comprehensive accounting software automating financial record-keeping.</p>
                         <p><strong>Technologies:</strong> PHP, Laravel, MySQL, NextJS</p>
-                        <a href="https://smartoffice.ai/" target="_blank" class="btn">View Details</a>
+                        <div class="mt-3">
+                            <span class="badge bg-primary">PHP</span>
+                            <span class="badge bg-secondary">Laravel</span>
+                            <span class="badge bg-success">NextJS</span>
+                        </div>
+                        <a href="https://smartoffice.ai/" target="_blank" class="btn btn-primary mt-3">
+                            <i class="fas fa-external-link-alt me-2"></i> View Details
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll">
                     <div class="project-image">
                         <img src="omicon_group_cover.jpeg" alt="Omicon ERP">
                     </div>
@@ -513,10 +584,14 @@
                         <h3 class="project-title">Omicon ERP</h3>
                         <p class="project-description">Enterprise resource planning system for business operations.</p>
                         <p><strong>Technologies:</strong> C#, ASP.NET, Oracle</p>
-                        <!-- <a href="#" class="btn">View Details</a> -->
+                        <div class="mt-3">
+                            <span class="badge bg-primary">C#</span>
+                            <span class="badge bg-secondary">ASP.NET</span>
+                            <span class="badge bg-success">Oracle</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll">
                     <div class="project-image">
                         <img src="boibazar.png" alt="BoiBazar">
                     </div>
@@ -524,10 +599,17 @@
                         <h3 class="project-title">BoiBazar</h3>
                         <p class="project-description">Online marketplace application for e-commerce transactions.</p>
                         <p><strong>Technologies:</strong> PHP, Laravel, NodeJS, MongoDB, AWS EC2</p>
-                        <a href="https://www.boibazar.com/"  target="_blank" class="btn">View Details</a>
+                        <div class="mt-3">
+                            <span class="badge bg-primary">PHP</span>
+                            <span class="badge bg-secondary">Laravel</span>
+                            <span class="badge bg-success">MongoDB</span>
+                        </div>
+                        <a href="https://www.boibazar.com/"  target="_blank" class="btn btn-primary mt-3">
+                            <i class="fas fa-external-link-alt me-2"></i> View Details
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll">
                     <div class="project-image">
                         <img src="lecture.png" alt="Lecture Publication Web Application">
                     </div>
@@ -535,7 +617,14 @@
                         <h3 class="project-title">Lecture Publication Web Application</h3>
                         <p class="project-description">Web application for publishing lecture materials.</p>
                         <p><strong>Technologies:</strong> PHP, Laravel, MySQL, JavaScript, Ajax</p>
-                        <a href="https://lecturepublicationsbd.com/" target="_blank" class="btn">View Details</a>
+                        <div class="mt-3">
+                            <span class="badge bg-primary">PHP</span>
+                            <span class="badge bg-secondary">Laravel</span>
+                            <span class="badge bg-success">MySQL</span>
+                        </div>
+                        <a href="https://lecturepublicationsbd.com/" target="_blank" class="btn btn-primary mt-3">
+                            <i class="fas fa-external-link-alt me-2"></i> View Details
+                        </a>
                     </div>
                 </div>
             </div>
@@ -545,15 +634,42 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
+            <h2 class="text-center mb-5 animate-on-scroll">Contact Me</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info animate-on-scroll">
                     <ul>
-                        <li><i>📍</i> Lalbagh, Dhaka, Bangladesh</li>
-                        <li><i>📞</i> +880 1673146917</li>
-                        <li><i>📧</i> besuwasmdmoin@gmail.com</li>
-                        <li><i>🔗</i> linkedin.com/in/moinbesuwas/</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lalbagh, Dhaka, Bangladesh</li>
+                        <li><i class="fas fa-phone"></i> +880 1673146917</li>
+                        <li><i class="fas fa-envelope"></i> besuwasmdmoin@gmail.com</li>
+                        <li><i class="fab fa-linkedin"></i> linkedin.com/in/moinbesuwas/</li>
                     </ul>
+                    
+                    <!-- MDB Form -->
+                    <!-- <form class="mt-5">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <input type="text" id="formName" class="form-control" />
+                                    <label class="form-label" for="formName">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <input type="email" id="formEmail" class="form-control" />
+                                    <label class="form-label" for="formEmail">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-outline mb-4">
+                            <textarea class="form-control" id="formMessage" rows="4"></textarea>
+                            <label class="form-label" for="formMessage">Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane me-2"></i> Send Message
+                        </button>
+                    </form> -->
                 </div>
             </div>
         </div>
@@ -563,7 +679,45 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Md Moin Besuwas. All Rights Reserved.</p>
+            <div class="mt-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+    ></script>
+    
+    <script>
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Initialize MDB components
+            const forms = document.querySelectorAll('.form-outline');
+            forms.forEach(form => {
+                new mdb.Input(form.querySelector('.form-control')).init();
+            });
+        });
+    </script>
 </body>
 </html>
